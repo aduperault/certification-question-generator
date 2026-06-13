@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+:root {
+    --blue:           #3D5A80;
+    --blue-mid:       #4E6E96;
+    --blue-pale:      #E8EEF5;
+    --sage:           #4A7C6F;
+    --sage-soft:      #85AFA6;
+    --sage-pale:      #E6F0EE;
+    --charcoal:       #2D2D2D;
+    --charcoal-mid:   #4A4A4A;
+    --charcoal-soft:  #7A7A7A;
+    --charcoal-pale:  #F2F2F2;
+    --stone:          #8C7B6E;
+    --stone-pale:     #F0EBE6;
+    --cream:          #F7F6F3;
+    --bg:             #EBEBEA;
+    --white:          #FFFFFF;
+    --font:           'Raleway', sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+html, body, [data-testid="stAppViewContainer"] {
+    background: var(--bg) !important;
+    color: var(--charcoal);
+    font-family: var(--font) !important;
+}
+
+[data-testid="stHeader"]          { background: transparent !important; }
+[data-testid="stMainBlockContainer"] { padding-top: 2rem !important; }
+#MainMenu, footer                 { visibility: hidden; }
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+h1 {
+    font-family: var(--font) !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--charcoal) !important;
+    letter-spacing: 0.02em !important;
+}
+
+h2, h3 {
+    font-family: var(--font) !important;
+    font-weight: 500 !important;
+    color: var(--blue) !important;
+}
+
+p, li, label, [data-testid="stMarkdownContainer"] p {
+    font-family: var(--font) !important;
+    font-weight: 300 !important;
+    color: var(--charcoal-mid) !important;
+    line-height: 1.8 !important;
+}
+
+/* ── Header eyebrow ───────────────────────────────────────────────────────── */
+.aa-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    margin-bottom: 0.25rem;
+}
+
+.aa-subtitle {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--charcoal-soft);
+    line-height: 1.7;
+    margin-top: 0.25rem;
+}
+
+/* ── Question card ────────────────────────────────────────────────────────── */
+.question-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+.question-text {
+    font-family: var(--font);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-top: 0.4rem;
+}
+
+/* ── Type badge ───────────────────────────────────────────────────────────── */
+.type-badge {
+    display: inline-block;
+    padding: 0.18rem 0.65rem;
+    border-radius: 999px;
+    font-size: 9px;
+    font-weight: 700;
+    font-family: var(--font);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.type-badge.single {
+    background: var(--blue-pale);
+    color: var(--blue);
+}
+
+.type-badge.multiple {
+    background: var(--sage-pale);
+    color: var(--sage);
+}
+
+/* ── Answer choices ───────────────────────────────────────────────────────── */
+.choice {
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-family: var(--font);
+    font-weight: 400;
+    background: var(--cream);
+    border: 1px solid #E4E2DF;
+    color: var(--charcoal-mid);
+    line-height: 1.6;
+}
+
+/* ── Section label ────────────────────────────────────────────────────────── */
+.section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    margin-bottom: 0.75rem;
+}
+
+/* ── Primary button ───────────────────────────────────────────────────────── */
+[data-testid="stButton"] button[kind="primary"],
+[data-testid="stButton"] button[kind="primary"] p,
+[data-testid="stButton"] button[kind="primary"] span,
+[data-testid="stButton"] button[kind="primary"] div {
+    background: var(--blue) !important;
+    color: #F7F6F3 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-family: var(--font) !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 0 !important;
+    letter-spacing: 0.04em !important;
+    transition: opacity 0.15s !important;
+}
+
+[data-testid="stButton"] button[kind="primary"]:hover,
+[data-testid="stButton"] button[kind="primary"]:hover p,
+[data-testid="stButton"] button[kind="primary"]:hover span {
+    opacity: 0.88 !important;
+    color: #F7F6F3 !important;
+}
+
+/* ── Expander ─────────────────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    background: var(--cream) !important;
+    border: 1px solid #E4E2DF !important;
+    border-radius: 10px !important;
+    margin-bottom: 1.5rem !important;
+}
+
+[data-testid="stExpander"] summary {
+    font-family: var(--font) !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: var(--stone) !important;
+}
+
+/* ── File uploader ────────────────────────────────────────────────────────── */
+[data-testid="stFileUploader"] {
+    background: var(--white) !important;
+    border: 1.5px dashed #C8C6C2 !important;
+    border-radius: 10px !important;
+}
+
+/* ── Text input ───────────────────────────────────────────────────────────── */
+[data-testid="stTextInput"] input {
+    background: var(--white) !important;
+    border: 1px solid #E4E2DF !important;
+    border-radius: 8px !important;
+    font-family: var(--font) !important;
+    color: var(--charcoal) !important;
+}
+
+/* ── Text area ────────────────────────────────────────────────────────────── */
+[data-testid="stTextArea"] textarea {
+    background: var(--white) !important;
+    border: 1px solid #E4E2DF !important;
+    border-radius: 8px !important;
+    font-family: var(--font) !important;
+    font-weight: 300 !important;
+    color: var(--charcoal) !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+[data-testid="stTabs"] [data-testid="stTab"] {
+    font-family: var(--font) !important;
+    font-weight: 500 !important;
+}
+
+/* ── Success / info messages ──────────────────────────────────────────────── */
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+    font-family: var(--font) !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+hr {
+    border-color: #E4E2DF !important;
+}
+
+/* ── Download button ──────────────────────────────────────────────────────── */
+[data-testid="stDownloadButton"] button {
+    background: var(--white) !important;
+    border: 1px solid #C8C6C2 !important;
+    color: var(--charcoal-mid) !important;
+    border-radius: 8px !important;
+    font-family: var(--font) !important;
+    font-weight: 500 !important;
+}
+
+[data-testid="stDownloadButton"] button:hover {
+    border-color: var(--blue) !important;
+    color: var(--blue) !important;
+}
